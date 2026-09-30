@@ -1,0 +1,36 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+
+# TypeScript build outputs (can be rebuilt with `npm run build`)
+dist/
+*.tsbuildinfo
+
+# C / C++ intermediate compiler files (do NOT commit temporary build files)
+*.obj
+*.exp
+*.ilk
+*.idb
+*.pdb
+
+# Allow the precompiled native execution bridge and node import library
+!xffi/bin/
+!xffi/bin/bridge.node
+!xffi/lib/
+!xffi/lib/node.lib
+!xffi/include/
+
+# .NET / C# build outputs (only for the C# projects)
+NativeLabrary/**/bin/
+NativeLabrary/**/obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE and OS files
+.vscode/*
+!.vscode/settings.json
+.idea/
+Thumbs.db
+.DS_Store

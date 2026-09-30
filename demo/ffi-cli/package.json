@@ -1,0 +1,24 @@
+{
+  "name": "ffi-cli",
+  "version": "1.0.0",
+  "description": "Interactive command-line interface for xffi",
+  "type": "module",
+  "bin": {
+    "xffi": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "xffi": "file:../../xffi",
+    "@clack/prompts": "^0.8.2",
+    "picocolors": "^1.1.1",
+    "cli-table3": "^0.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.0"
+  }
+}

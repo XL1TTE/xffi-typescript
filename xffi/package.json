@@ -1,0 +1,34 @@
+{
+  "name": "xffi",
+  "version": "1.0.0",
+  "description": "Zero-dependency, universal PE parser and FFI inspector",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./node": {
+      "node": {
+        "types": "./dist/node.d.ts",
+        "import": "./dist/node.js"
+      }
+    },
+    "./web": {
+      "types": "./dist/loaders/web.d.ts",
+      "import": "./dist/loaders/web.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:native": "cl /O2 /LD /I include src\\native\\bridge.cpp lib\\node.lib /Fe:bin\\bridge.node",
+    "test:node": "tsx test-run.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "tsx": "^4.19.0"
+  }
+}
