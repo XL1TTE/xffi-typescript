@@ -29,8 +29,7 @@ NativeLabrary/**/obj/
 *.sln.docstates
 
 # IDE and OS files
-.vscode/*
-!.vscode/settings.json
+.vscode/
 .idea/
 Thumbs.db
 .DS_Store
